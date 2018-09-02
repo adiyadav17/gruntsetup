@@ -1,0 +1,37 @@
+{
+  "name": "pwc-microsite-templates",
+  "description": "pwc-templates with template includes",
+  "version": "0.0.1",
+  "author": "Atul Yadav",
+  "main": "Gruntfile.js",
+  "homepage": "",
+  "scripts": {},
+  "devDependencies": {
+    "jquery": "^3.2.1",
+    "holderjs": "^2.9.1",
+    "bootstrap": "^4.0",
+    "popper.js": "^1.12.9",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-regex-replace": "^0.2.6",
+    "jit-grunt": "^0.9.1",
+    "request": "^2.57.0",
+    "xml2json": "^0.7.1",
+    "font-awesome": "^4.5.0"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "files": [
+    "tasks/includes.js"
+  ]
+}

@@ -1,0 +1,5 @@
+Options +Indexes
+IndexOptions FancyIndexing FoldersFirst ScanHTMLTitles
+#IndexOrderDefault Ascending Name
+DirectoryIndex somethingRandom.html
+IndexIgnore __new__template.html fonts img js less video

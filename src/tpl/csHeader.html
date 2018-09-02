@@ -1,0 +1,114 @@
+<header class="clearfix">
+
+
+
+
+    <nav class="navbar" id="top">
+        <div class="container">
+            <!-- Start Top Bar Here -->
+            <div class="top-bar">
+                    <!-- Begin: src/components/Logo-Component-Template.html -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html" cs-attr-href="homeLink">
+                            <img src="img/logo.png"  cs-src="'/img/logo.png'"  alt="logo"/></a>
+                    </div><!-- End: src/components/Logo-Component-Template.html -->
+                <div class="pull-right">
+                        <!-- Begin: src/components/Top-Navigation-Component-Template.html -->
+                        <ul class="top-links">
+                            <li cs-repeat="topNavigation as item">
+                                <a href="Download.html" cs-href="item.urlExternalOrInternal"  cs-attr-target="item.urlTarget">
+                                    <i class="arrow-circle-o-down" cs-attr-class="item.cssClass"></i>
+                                    <span cs-replace="item.label">Downloads</span>
+                                </a>
+                            </li>
+                            <li cs-remove><a href="Termine.html"><i class="th-large"></i><span>Termine</span></a>
+                            </li>
+                            <li cs-remove><a href="standorte.html"><i class="fa map-marker"></i><span>Standorte</span></a>
+                            </li>
+                            <li cs-remove><a href="Kontakt.html"><i class="fa comments-o"></i><span> Kontakt</span></a>
+                            </li>
+                        </ul><!-- End: src/components/Top-Navigation-Component-Template.html -->
+                        <!-- Begin: src/components/Language-Switcher-Component-Template.html -->
+                            <ul class="lag-fl" cs-if="custom.portal.localeSites?size gt 1">
+                                <li cs-repeat="custom.portal.localeSites as site">
+                                    <a href="#" class="active" cs-class="(site.locale == .locale)?string('active', '')" cs-href="site.url">
+                                        <i class="de-flag" cs-attr-class="site.label+'-flag'">
+                                            <img src="img/de-flag.png" cs-src="'/img/'+site.label+'-flag.png'">
+                                        </i>
+                                        <span cs-replace="site.label">DE</span>
+                                    </a>
+                                </li>
+                                <li cs-remove>
+                                    <a href="#">
+                                        <i class="en-flag">
+                                            <img src="img/en-flag.png" cs-src="cs.resource('/img/en-flag.png')">
+                                        </i>
+                                        <span>EN</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        <!-- End: src/components/Language-Switcher-Component-Template.html -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-navbar-collapse-1"
+                            aria-expanded="false" aria-controls="navbar">
+                        <div id="navbar-hamburger">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="menuText">Menu</span>
+                            <span class="icon-bar"></span></div>
+                    </button>
+                </div>
+            </div>
+            <!--End Top Bar Here  -->
+            <!--Start Navigation  Bar Here  -->
+                <!-- Begin: src/components/Main-Navigation-Component-Template.html -->
+                <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="index.html" cs-attr-href="homeNavigation.url" cs-replace="homeNavigation.label">Home</a>
+                        </li>
+                        <li  cs-repeat="navigation as item" cs-class="(item.children?has_content)?string('dropdown','')">
+                            <a href="Team.html" cs-attr-data-toggle="(item.children?has_content)?string('dropdown','')" cs-class="(item.children?has_content)?string('dropdown-toggle','')" cs-href="item.urlExternalOrInternal" cs-attr-target="item.urlTarget">
+                                <cs-replace value="item.label">Team</cs-replace>
+                                <cs-if value="item.children">
+                                    <i class="fa angle-up" ></i><i class="fa angle-down"></i>
+                                </cs-if>
+                            </a>
+                            <ul class="dropdown-menu mVar" cs-if="item.children">
+                                <li cs-repeat="item.children as child" >
+                                    <a href="Article-detail.html" cs-href="child.urlExternalOrInternal" cs-replace="child.label" cs-attr-target="child.urlTarget">Advertising</a>
+                                </li>
+                                <li cs-remove><a href="Article-detail.html">Contrary to popular belief</a></li>
+                                <li cs-remove><a href="Article-detail.html">Lorem Ipsum is not simply</a></li>
+                                <li cs-remove><a href="Article-detail.html">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li cs-remove><a href="Article-detail.html">Expertise</a></li>
+                        <li cs-remove class="dropdown">
+                            <a href="Article-detail.html" class="dropdown-toggle" data-toggle="dropdown">Prüfungskonzept
+                                <i class="fa angle-up"></i><i class="fa angle-down"></i></a>
+                            <ul class="dropdown-menu mVar">
+                                <li cs-remove><a href="Article-detail.html">Contrary to popular belief</a></li>
+                                <li cs-remove><a href="Article-detail.html">Lorem Ipsum is not simply</a></li>
+                                <li cs-remove><a href="Article-detail.html">Something else here</a></li>
+
+                            </ul>
+                        </li>
+                        <li cs-remove><a href="Article-detail.html"> Steuerberatung</a></li>
+                        <li cs-remove><a href="Article-detail.html"> Betreuungskonzept</a></li>
+                        <li cs-remove><a href="Article-detail.html"> Qualitätssicherung</a></li>
+                        <li cs-remove class="bdrBtm"><a href="Article-detail.html"> Unternehmensdarstellung</a></li>
+
+
+                        <li cs-remove  class="mbNav"><a href="Download.html"> Downloads</a></li>
+                        <li cs-remove class="mbNav"><a href="Termine.html"> Termine</a></li>
+                        <li cs-remove class="mbNav"><a href="standorte.html"> Standorte</a></li>
+                        <li cs-remove class="mbNav"><a href="Kontakt.html"> Kontakt</a></li>
+
+
+
+                    </ul>
+
+                </div><!-- End: src/components/Main-Navigation-Component-Template.html -->
+        </div>
+    </nav>
+</header>
